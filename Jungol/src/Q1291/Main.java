@@ -8,55 +8,50 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
-		int cnt = 1;
 		int A;
-		int B;
-
-		for (;;) {
-			if (cnt == 10) {
-				break;
-			}
-			A = sc.nextInt();
-			B = sc.nextInt();
-			if (2 < A && A < 9) {
-				if (2 < B && B < 9) {
-					cnt = 1;
-					for (int j = cnt; j <= 9; j++) {
-
-						if (A < B) {
-							for (int k = A; k <= B; k++) {
-								System.out.print(k + " * " + cnt + " =");
-								System.out.printf("%3d", (k * cnt));
-								System.out.print("   ");
-								if (k == B) {
-									System.out.println("");
-								}
-							}
-						}
-					}
-				} else if (A > B) {
-					if (2 < A && A < 9) {
-						if (2 < B && B < 9) {
-							for (int k = A; k >= B; k--) {
-								System.out.print(k + " * " + cnt + " =");
-								System.out.printf("%3d", (k * cnt));
-								System.out.print("   ");
-								if (k == B) {
-									System.out.println("");
-								}
-							}
-						}
-						cnt++;
-					}
-				}
-
-			} else {
-				System.out.println("INPUT ERROR!");
-			}
-
+		int B ;
+		
+		for(;;) {
+			 A= sc.nextInt();
+			 B = sc.nextInt();
+		if (A<=1||A>=10) {
+					System.out.println("INPUT ERROR!");
 		}
+		else if(B<=1||B>=10) {
+				System.out.println("INPUT ERROR!");
+		}
+	
+		if(A>1&&A<10) {
+			if(B>1&&B<10) {
+				
+		if(A<B) {	
+		for(int i=1;i<10;i++) {
+			for(int j = A;j<=B;j++) {
+				System.out.print(j + " * "+ i + " =");
+				System.out.printf("%3d",(j*i));
+				System.out.print("   ");
+			}
+			System.out.println("");
+		}
+		}else {
+			for(int i=1;i<10;i++) {
+			for(int j = A;j>=B;j--) {
+				System.out.print(j + " * "+ i + " =");
+				System.out.printf("%3d",(j*i));
+				System.out.print("   ");
+			}
+			System.out.println("");
+		}
+			
+		}
+		break;
+			}
+		}
+		}
+			
+		
+		
 	}
-
 }
 
 // A 값을 받고 거기에 9까지 하고 B랑 같아질ㅒㄸ까지

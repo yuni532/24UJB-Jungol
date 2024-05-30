@@ -1,4 +1,4 @@
-package Q1307;
+ package Q1307;
 
 
 import java.util.Scanner;
@@ -9,19 +9,34 @@ public class Main {
 	Scanner sc = new Scanner(System.in);
 	int A = sc.nextInt();
 	
-	for (int i =A;i>=1;i--) {
+	char[][] arr = new char [A][A];
 	
-		for (int j=1;j<=A;j--) {
+	char str = 'A';
+	
+	for (int i=0;i<A;i++) {
+		for(int j=0;j<A;j++) {
+			if (str >'Z') {
+				str = 'A';
+				arr[i][j]=str;
+			str++;
 			
-			char D = (char)((j*i)+64);
-			//if (D=='Z') {
+			}else {
 				
-	//		}
-			System.out.print(D+" ");
+			arr[i][j]= str;
+		str++;
+			}
 		}
-	
+	}
+		
+		for (int i=A-1;i>=0;i--) {
+			for(int j=A-1;j>=0;j--) {
+		
+			System.out.print(arr[j][i]+" ");
+	}
 		System.out.println("");
 	}
 	}
 
 }
+
+// 풀어야함
